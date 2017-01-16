@@ -1,5 +1,4 @@
-
-    <!-- season selection -->
-    <div *ngIf="!season">特别的你</div>
-    <!-- display season content -->
-    <div *ngIf="season">{{ season }}</div>
+<!-- season selection -->
+<div *ngIf="!season">特别的你</div>
+<!-- display season content -->
+<image-wall *ngIf="season" [season]="season" [images]="images"></image-wall>
