@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs";
 
@@ -8,7 +8,7 @@ import {Subscription} from "rxjs";
     templateUrl: './anniversary2016.component.html',
     styleUrls: ['./anniversary2016.component.scss']
 })
-export class Anniversary2016Component implements OnInit {
+export class Anniversary2016Component implements OnInit, OnDestroy {
     private season: string;
     private subscription: Subscription;
 
