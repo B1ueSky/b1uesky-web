@@ -1,8 +1,8 @@
 <div class="image-wall position-absolute-center">
   <!-- for each row -->
-  <div class="image-wall-row" *ngFor="let row of images">
+  <div *ngFor="let row of images">
     <div class="image-wall-item" *ngFor="let image of row">
-        <img class="image-wrapper" [src]="image" alt="特别的你">
+      <img class="image-wrapper" [ngStyle]="styleImage()" [src]="image" alt="特别的你">
     </div>
   </div>
 </div>
