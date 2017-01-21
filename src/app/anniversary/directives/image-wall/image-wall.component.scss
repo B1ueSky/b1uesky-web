@@ -1,0 +1,16 @@
+.image-wall {
+  .image-wall-row {
+    .image-wall-item {
+      display: inline-block;
+      height: 100px;
+      margin: 15px;
+      width: 100px;
+
+      .image-wrapper {
+        border: 2px solid white;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
