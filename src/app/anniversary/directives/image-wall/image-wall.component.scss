@@ -1,19 +1,16 @@
 .image-wall {
+  .image-wall-row {
     .image-wall-item {
       display: inline-block;
       height: 100px;
       margin: 15px;
-      vertical-align: middle;
       width: 100px;
 
       .image-wrapper {
-        //$angle: randoom(5) - 5;
         border: 2px solid white;
         max-height: 100%;
         max-width: 100%;
-
-        //transform: rotate({random(5)-5}deg);
-        ////-webkit-transform: rotate(#{$angle}deg);
       }
     }
+  }
 }
