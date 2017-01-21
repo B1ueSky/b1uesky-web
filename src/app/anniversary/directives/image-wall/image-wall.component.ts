@@ -58,10 +58,8 @@ export class ImageWallComponent implements OnInit {
     public styleImage() {
         const angle = _.random(-5, 5);
         return {
-            'transform': 'translate(-50%, -50%) rotate(' + angle + 'deg) ',
-            '-webkit-transform': 'translate(-50%, -50%) rotate(' + angle + 'deg) ',
-            'left': '50%',
-            'top': '50%',
+            'transform': 'rotate(' + angle + 'deg) ',
+            '-webkit-transform': 'rotate(' + angle + 'deg) ',
         };
     }
 }
