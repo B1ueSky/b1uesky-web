@@ -1,8 +1,7 @@
 <div class="image-wall" fxLayout="column" fxLayoutAlign="center center">
   <!-- for each row -->
-  <div *ngFor="let row of images" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
+  <div *ngFor="let row of images2D" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
     <div *ngFor="let image of row" class="image-wall-item" fxLayoutAlign="center center">
-      <!--<img class="image-wrapper" [ngStyle]="styleImage()" [src]="image" alt="特别的你">-->
       <img [src]="image.path" alt="特别的你" class="image-wrapper" [ngStyle]="styleImage()">
     </div>
   </div>
