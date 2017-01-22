@@ -5,6 +5,7 @@ import {AnniversaryRouter} from "./anniversary.router";
 import {ImageWallComponent} from './directives/image-wall/image-wall.component';
 import {MaterialModule} from "@angular/material";
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ImageService} from "../services/image.service";
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
         FlexLayoutModule.forRoot(),
         MaterialModule.forRoot(),
     ],
-    declarations: [Anniversary2016Component, ImageWallComponent]
+    declarations: [Anniversary2016Component, ImageWallComponent],
+    providers: [ImageService]
 })
 export class AnniversaryModule {
 }

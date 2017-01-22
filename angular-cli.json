@@ -8,6 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "app/anniversary/assets",
         "assets",
         "favicon.ico"
       ],

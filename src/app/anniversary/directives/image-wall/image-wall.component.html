@@ -3,7 +3,7 @@
   <div *ngFor="let row of images" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
     <div *ngFor="let image of row" class="image-wall-item" fxLayoutAlign="center center">
       <!--<img class="image-wrapper" [ngStyle]="styleImage()" [src]="image" alt="特别的你">-->
-      <img [src]="image" alt="特别的你" class="image-wrapper" [ngStyle]="styleImage()">
+      <img [src]="image.path" alt="特别的你" class="image-wrapper" [ngStyle]="styleImage()">
     </div>
   </div>
 </div>
