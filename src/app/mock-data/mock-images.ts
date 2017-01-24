@@ -7,7 +7,7 @@ export const mockImages: {[key: string]: Image[]} = {
     autumn: _.map(_.range(1, 113), (num): Image => {
         return {
             _id: num.toString(),
-            path: resourceBase + 'autumn - ' + num + '.jpg'
+            path: resourceBase + 'anniversary/' + 'autumn - ' + num + '.jpg'
         };
     })
 };
