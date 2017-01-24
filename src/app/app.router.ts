@@ -4,7 +4,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 const appStates: Routes = [
     {
         path: '',
-        redirectTo: 'anniversary/2016',
+        redirectTo: 'bszone',
         pathMatch: 'full'
     },
     {

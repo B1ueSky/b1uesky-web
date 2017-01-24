@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {AppRouter} from "./app.router";
 import {AnniversaryModule} from "./anniversary/anniversary.module";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {BsZoneModule} from "./bs-zone/bs-zone.module";
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
         AnniversaryModule,
         AppRouter,
         BrowserModule,
+        BsZoneModule,
         FormsModule,
         HttpModule,
     ],
