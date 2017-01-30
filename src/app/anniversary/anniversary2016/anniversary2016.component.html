@@ -1,6 +1,6 @@
 <section class="anniversay2016" fxLayoutAlign="center center">
     <!-- season selection -->
-    <div *ngIf="!season">特别的你</div>
+    <div *ngIf="!season" class="letter-header">献给特别的你</div>
     <!-- display season content -->
     <image-wall *ngIf="season" [images]="images" [numCols]="numImagesPerRow" [angleRange]="angle"></image-wall>
 </section>

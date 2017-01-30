@@ -1,8 +1,18 @@
+@import '../../styles/color';
+$background-color: $grey-900;
+$text-primary-color: $grey-50;
+$text-secondary-color: $grey-500;
+
 .anniversay2016 {
   min-height: 100vh;
   min-width: 100vm;
   overflow: auto;
   height: auto;
   width: auto;
-  background-color: #181818;
+  background-color: $background-color;
+
+  .letter-header {
+    color: $text-primary-color;
+    font-size: 30px;
+  }
 }
