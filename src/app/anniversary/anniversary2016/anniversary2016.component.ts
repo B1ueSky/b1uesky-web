@@ -13,7 +13,9 @@ import {Image} from "../../models/image";
 })
 export class Anniversary2016Component implements OnInit, OnDestroy {
     private angle: number = 5;
+    private canAccess: boolean = false;
     private images: Image[];
+    private initSequence: number[];
     private isShuffled: boolean = false;
     private numImagesPerRow: number = 5;
     private season: string;
@@ -24,8 +26,6 @@ export class Anniversary2016Component implements OnInit, OnDestroy {
 
     public async ngOnInit(): Promise<void> {
         this.subscription = this.route.queryParams.subscribe((params: any) => {
-            this.season = _.indexOf(['spring', 'summer', 'autumn', 'winter'], params.season) > -1 ?
-                            params.season : null;
             if (!_.isEmpty(params.numImagesPerRow)) {
                 this.numImagesPerRow = _.parseInt(params.numImagesPerRow);
             }
@@ -36,7 +36,10 @@ export class Anniversary2016Component implements OnInit, OnDestroy {
                 this.isShuffled = true;
             }
         });
-        this.images = this.season ? await this.getSeasonImages(this.season) : null;
+        this.images = await this.getPuzzleImages();
+        if (!this.season) {
+            this.initSequence = [0, 1, 2, 3, 4, 5, 6, null, 7];
+        }
         if (this.isShuffled) {
             this.images = _.shuffle(this.images);
         }
@@ -49,5 +52,15 @@ export class Anniversary2016Component implements OnInit, OnDestroy {
 
     private async getSeasonImages(season: string): Promise<Image[]> {
         return await this.imageService.list({label: season});
+    }
+
+    private async getPuzzleImages(): Promise<Image[]> {
+        return await this.imageService.list({label: 'puzzle'});
+    }
+
+    private async onPuzzleSolved(solved: boolean) {
+        this.canAccess = true;
+        this.season = 'winter';
+        this.images = await this.getSeasonImages(this.season);
     }
 }

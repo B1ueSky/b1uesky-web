@@ -4,7 +4,31 @@ import {Image} from "../models/image";
 const resourceBase = '../assets/images/';
 
 export const mockImages: {[key: string]: Image[]} = {
-    autumn: _.map(_.range(1, 113), (num): Image => {
+    winter: _.map(_.range(1, 114), (num): Image => {
+        return {
+            _id: num.toString(),
+            path: resourceBase + 'anniversary/' + 'autumn - ' + num + '.jpg'
+        };
+    }),
+    spring: _.map(_.range(1, 114), (num): Image => {
+        return {
+            _id: num.toString(),
+            path: resourceBase + 'anniversary/' + 'autumn - ' + num + '.jpg'
+        };
+    }),
+    summer: _.map(_.range(1, 114), (num): Image => {
+        return {
+            _id: num.toString(),
+            path: resourceBase + 'anniversary/' + 'autumn - ' + num + '.jpg'
+        };
+    }),
+    autumn: _.map(_.range(1, 114), (num): Image => {
+        return {
+            _id: num.toString(),
+            path: resourceBase + 'anniversary/' + 'autumn - ' + num + '.jpg'
+        };
+    }),
+    puzzle: _.map(_.range(1, 9), (num): Image => {
         return {
             _id: num.toString(),
             path: resourceBase + 'anniversary/' + 'autumn - ' + num + '.jpg'

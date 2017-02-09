@@ -1,6 +1,6 @@
 export class Image {
-    public _id:     string;
-    public path:    string;
+    public _id     : string;
+    public path    : string;
     public comment?: string;
 
     constructor(obj: any) {

@@ -1,6 +1,8 @@
-<section class="anniversay2016" fxLayoutAlign="center center">
+<section class="anniversay2016" fxLayout="column" fxLayoutAlign="center center">
+    <!-- to solve puzzle -->
+    <div *ngIf="!canAccess" class="letter-header">献给特别的你</div>
+    <square-puzzle *ngIf="!canAccess" [images]="images" [initSequence]="initSequence" (onSolved)="onPuzzleSolved($event)"></square-puzzle>
     <!-- season selection -->
-    <div *ngIf="!season" class="letter-header">献给特别的你</div>
     <!-- display season content -->
-    <image-wall *ngIf="season" [images]="images" [numCols]="numImagesPerRow" [angleRange]="angle"></image-wall>
+    <image-wall *ngIf="canAccess" [images]="images" [numCols]="numImagesPerRow" [angleRange]="angle"></image-wall>
 </section>

@@ -1,0 +1,6 @@
+<div class="square-puzzle" fxLayout="column" fxLayoutAlign="center center">
+  <!-- for each row -->
+  <div *ngFor="let row of images2D; let rowIdx = index" class="square-puzzle-row" fxLayout="row" fxLayoutAlign="center center">
+    <img *ngFor="let image of row; let idx = index" [src]="image.path" (click)="moveCell(rowIdx*numCols + idx)" class="square-puzzle-item" fxLayoutAlign="center center">
+  </div>
+</div>

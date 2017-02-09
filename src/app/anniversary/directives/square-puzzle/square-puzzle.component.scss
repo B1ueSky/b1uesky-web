@@ -1,0 +1,10 @@
+.square-puzzle {
+  border: 2px solid white;
+  .square-puzzle-row {
+    .square-puzzle-item {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}

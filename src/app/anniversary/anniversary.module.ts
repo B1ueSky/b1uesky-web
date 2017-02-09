@@ -6,6 +6,7 @@ import {ImageWallComponent} from './directives/image-wall/image-wall.component';
 import {MaterialModule} from "@angular/material";
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ImageService} from "../services/image.service";
+import { SquarePuzzleComponent } from './directives/square-puzzle/square-puzzle.component';
 
 @NgModule({
     imports: [
@@ -14,7 +15,7 @@ import {ImageService} from "../services/image.service";
         FlexLayoutModule.forRoot(),
         MaterialModule.forRoot(),
     ],
-    declarations: [Anniversary2016Component, ImageWallComponent],
+    declarations: [Anniversary2016Component, ImageWallComponent, SquarePuzzleComponent],
     providers: [ImageService]
 })
 export class AnniversaryModule {
