@@ -93,6 +93,6 @@ export class SquarePuzzleComponent implements OnInit {
     }
 
     private isPuzzleSolved(): boolean {
-        return true;
+        return _.isEqual(_.sortBy(this.initSequence), this.initSequence);
     }
 }
