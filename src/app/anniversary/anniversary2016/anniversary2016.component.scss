@@ -1,5 +1,6 @@
 @import '../../styles/color';
 $background-color: $grey-900;
+$light-background-color: $grey-800;
 $text-primary-color: $grey-50;
 $text-secondary-color: $grey-500;
 
@@ -14,5 +15,39 @@ $text-secondary-color: $grey-500;
   .letter-header {
     color: $text-primary-color;
     font-size: 30px;
+  }
+
+  .season-selection {
+    width: 100%;
+    height: 50px;
+    margin: 0 0 20px;
+    padding: 0;
+    overflow: hidden;
+
+    /* Float the list items side by side */
+    .selection-tab {
+      background-color: $light-background-color;
+      border: 0;
+      float: left;
+      display: inline-block;
+      color: $text-secondary-color;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of links on hover */
+    :hover, :focus {
+      color: $light-background-color;
+      background-color: $text-secondary-color
+    }
+
+    /* Create an active/current class */
+    .active {
+      color: $text-primary-color;
+      background-color: $background-color;
+    }
   }
 }

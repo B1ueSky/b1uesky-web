@@ -18,8 +18,14 @@ export class Anniversary2016Component implements OnInit, OnDestroy {
     private initSequence: number[];
     private isShuffled: boolean = false;
     private numImagesPerRow: number = 5;
-    private season: string;
+    private season: number;
     private subscription: Subscription;
+    private seasons: {[key: number]: {show: string, label: string}} = {
+        100: {show: '冬', label: 'winter'},
+        200: {show: '春', label: 'spring'},
+        300: {show: '夏', label: 'summer'},
+        400: {show: '秋', label: 'autumn'}
+    };
 
     constructor(private route: ActivatedRoute, private imageService: ImageService) {
     }
@@ -50,17 +56,24 @@ export class Anniversary2016Component implements OnInit, OnDestroy {
         this.subscription.unsubscribe();
     }
 
-    private async getSeasonImages(season: string): Promise<Image[]> {
-        return await this.imageService.list({label: season});
+    private async getSeasonImages(season: number): Promise<Image[]> {
+        return await this.imageService.list({label: this.seasons[season].label});
     }
 
     private async getPuzzleImages(): Promise<Image[]> {
         return await this.imageService.list({label: 'puzzle'});
     }
 
-    private async onPuzzleSolved(solved: boolean) {
+    private async onPuzzleSolved(solved: boolean): Promise<void> {
         this.canAccess = true;
-        this.season = 'winter';
+        this.season = 100;
         this.images = await this.getSeasonImages(this.season);
+    }
+
+    private async selectSeason(season: number): Promise<void> {
+        if (season in this.seasons) {
+            this.season = season;
+            this.images = await this.getSeasonImages(this.season);
+        }
     }
 }
