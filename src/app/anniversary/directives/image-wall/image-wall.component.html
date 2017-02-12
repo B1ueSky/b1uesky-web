@@ -1,8 +1,28 @@
-<div class="image-wall" fxLayout="column" fxLayoutAlign="center center">
+<div class="image-wall" fxLayout="column" fxLayoutAlign="center center" [class.no-scroll]="popupImage">
   <!-- for each row -->
   <div *ngFor="let row of images2D" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
     <div *ngFor="let image of row" class="image-wall-item" fxLayoutAlign="center center">
-      <img [src]="image.thumbnail" alt="特别的你" class="image-wrapper" [ngStyle]="styleImage()">
+      <img [src]="image.thumbnail" alt="特别的你" class="image-wrapper" [ngStyle]="styleImageWallItem()"
+          (click)="zoomInImage(image)">
+    </div>
+  </div>
+
+  <!-- image modal -->
+  <div *ngIf="popupImage" class="image-modal" fxLayout="row" fxLayoutAlign="space-between stretch">
+    <!-- left tool box -->
+    <div class="left-tool-box" fxFlex="8" fxLayout="column" fxLayoutAlign="start start"></div>
+
+    <!-- Modal Content (The Image) -->
+    <div class="modal-content" fxFlex fxLayout="column" fxLayoutAlign="center center">
+      <img [src]="popupImage.path" class="modal-content-image">
+      <!-- Modal Caption (Image Text) -->
+      <!--<div id="caption"></div>-->
+    </div>
+
+    <!-- right tool box -->
+    <div class="right-tool-box" fxFlex="8" fxLayout="column" fxLayoutAlign="start end">
+      <!-- The Close Button -->
+      <span class="close" (click)="closeModal()">&times;</span>
     </div>
   </div>
 </div>

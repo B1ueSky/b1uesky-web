@@ -13,6 +13,7 @@ export class ImageWallComponent implements OnInit {
     @Input() private angleRange: number | [number, number] = 5;
 
     private images2D: Image[][];
+    private popupImage: Image;
 
     constructor() {
     }
@@ -27,11 +28,19 @@ export class ImageWallComponent implements OnInit {
     ngOnInit() {
     }
 
-    public styleImage() {
+    private styleImageWallItem(): {[key: string]: string} {
         const angle = _.random(this.angleRange[0], this.angleRange[1]);
         return {
             'transform': 'rotate(' + angle + 'deg) ',
             '-webkit-transform': 'rotate(' + angle + 'deg) ',
         };
+    }
+
+    private zoomInImage(image: Image): void {
+        this.popupImage = image;
+    }
+
+    private closeModal(): void {
+        this.popupImage = null;
     }
 }

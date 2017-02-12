@@ -1,3 +1,9 @@
+@import '../../../styles/color';
+$background-color: $grey-900;
+$light-background-color: $grey-800;
+$text-primary-color: $grey-50;
+$text-secondary-color: $grey-500;
+
 .image-wall {
   .image-wall-row {
     .image-wall-item {
@@ -10,6 +16,49 @@
         border: 2px solid white;
         max-height: 100%;
         max-width: 100%;
+      }
+    }
+  }
+
+  /* The Modal (background) */
+  .image-modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    display: block;
+
+    .left-tool-box {
+
+    }
+
+    .modal-content {
+      /* Modal Content (Image) */
+      .modal-content-image {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .right-tool-box {
+      /* The Close Button */
+      .close {
+        color: $text-secondary-color;
+        font-size: 40px;
+        height: 22px;
+        line-height: 18px;
+        margin: 10px;
+        text-align: center;
+        transition: 0.5s;
+        width: 22px;
+      }
+      .close:hover, .close:focus {
+        cursor: pointer;
+        transform: rotate(90deg);
       }
     }
   }
