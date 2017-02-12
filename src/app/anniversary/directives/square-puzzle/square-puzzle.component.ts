@@ -23,7 +23,7 @@ export class SquarePuzzleComponent implements OnInit {
     // the number of columns of the square.
     private numCols: number;
     // the empty cell.
-    private emptyCell: Image = {_id: 'empty', path:''};
+    private emptyCell: Image = {_id: 'empty', path: '', thumbnail: ''};
     private emptyCellIndex;
 
     constructor() {

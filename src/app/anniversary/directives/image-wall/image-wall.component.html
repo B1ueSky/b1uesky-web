@@ -2,7 +2,7 @@
   <!-- for each row -->
   <div *ngFor="let row of images2D" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
     <div *ngFor="let image of row" class="image-wall-item" fxLayoutAlign="center center">
-      <img [src]="image.path" alt="特别的你" class="image-wrapper" [ngStyle]="styleImage()">
+      <img [src]="image.thumbnail" alt="特别的你" class="image-wrapper" [ngStyle]="styleImage()">
     </div>
   </div>
 </div>
