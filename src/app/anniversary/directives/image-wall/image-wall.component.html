@@ -1,6 +1,6 @@
 <div class="image-wall" fxLayout="column" fxLayoutAlign="center center" [class.no-scroll]="popupImage">
   <!-- for each row -->
-  <div *ngFor="let row of images2D; let $r = index;" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
+  <div *ngFor="let row of images2D; let $r = index;" class="image-wall-row" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
     <div *ngFor="let image of row; let $c = index;" class="image-wall-item" fxLayoutAlign="center center">
       <img [src]="image.thumbnail" alt="特别的你" class="image-wrapper" [ngStyle]="styleImageWallItem()"
           (click)="popupImageModal($r * numCols + $c)">
