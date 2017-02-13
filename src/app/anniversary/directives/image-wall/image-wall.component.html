@@ -1,28 +1,35 @@
 <div class="image-wall" fxLayout="column" fxLayoutAlign="center center" [class.no-scroll]="popupImage">
   <!-- for each row -->
-  <div *ngFor="let row of images2D" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
-    <div *ngFor="let image of row" class="image-wall-item" fxLayoutAlign="center center">
+  <div *ngFor="let row of images2D; let $r = index;" class="image-wall-row" fxLayout="row" fxLayoutAlign="center center">
+    <div *ngFor="let image of row; let $c = index;" class="image-wall-item" fxLayoutAlign="center center">
       <img [src]="image.thumbnail" alt="特别的你" class="image-wrapper" [ngStyle]="styleImageWallItem()"
-          (click)="zoomInImage(image)">
+          (click)="popupImageModal($r * numCols + $c)">
     </div>
   </div>
 
   <!-- image modal -->
-  <div *ngIf="popupImage" class="image-modal" fxLayout="row" fxLayoutAlign="space-between stretch">
+  <div *ngIf="popupImageIdx >= 0" class="image-modal" fxLayout="row" fxLayoutAlign="space-between stretch">
     <!-- left tool box -->
-    <div class="left-tool-box" fxFlex="8" fxLayout="column" fxLayoutAlign="start start"></div>
+    <div class="left-tool-box" fxFlex="8" fxLayout="column" fxLayoutAlign="center center">
+      <!-- The left arrow button -->
+      <span *ngIf="popupImageIdx > 0" class="left-arrow" (click)="moveToLastImage()">&larr;</span>
+    </div>
 
-    <!-- Modal Content (The Image) -->
+    <!-- modal content -->
     <div class="modal-content" fxFlex fxLayout="column" fxLayoutAlign="center center">
-      <img [src]="popupImage.path" class="modal-content-image">
-      <!-- Modal Caption (Image Text) -->
+      <img [src]="images[popupImageIdx].path" class="modal-content-image">
+      <!-- modal caption (image text) -->
       <!--<div id="caption"></div>-->
     </div>
 
     <!-- right tool box -->
-    <div class="right-tool-box" fxFlex="8" fxLayout="column" fxLayoutAlign="start end">
-      <!-- The Close Button -->
+    <div class="right-tool-box" fxFlex="8" fxLayout="column" fxLayoutAlign="space-between center">
+      <!-- the close button -->
       <span class="close" (click)="closeModal()">&times;</span>
+      <!-- the right arrow button -->
+      <span *ngIf="popupImageIdx < images.length-1" class="right-arrow" (click)="moveToNextImage()">&rarr;</span>
+      <!-- the placeholder to make the right arrow btn to be center -->
+      <span class="placeholder"></span>
     </div>
   </div>
 </div>

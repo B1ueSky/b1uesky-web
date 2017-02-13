@@ -13,7 +13,7 @@ export class ImageWallComponent implements OnInit {
     @Input() private angleRange: number | [number, number] = 5;
 
     private images2D: Image[][];
-    private popupImage: Image;
+    private popupImageIdx: number;
 
     constructor() {
     }
@@ -36,11 +36,19 @@ export class ImageWallComponent implements OnInit {
         };
     }
 
-    private zoomInImage(image: Image): void {
-        this.popupImage = image;
+    private popupImageModal(imageIdx: number): void {
+        this.popupImageIdx = imageIdx;
     }
 
     private closeModal(): void {
-        this.popupImage = null;
+        this.popupImageIdx = -1;
+    }
+
+    private moveToLastImage(): void {
+        this.popupImageIdx--;
+    }
+
+    private moveToNextImage(): void {
+        this.popupImageIdx++;
     }
 }

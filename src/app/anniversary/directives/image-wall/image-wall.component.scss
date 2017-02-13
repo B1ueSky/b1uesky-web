@@ -32,12 +32,27 @@ $text-secondary-color: $grey-500;
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
     display: block;
 
-    .left-tool-box {
+    /* close, left arrow, and right arrow buttons */
+    .symbol-btn {
+      color: $text-secondary-color;
+      height: 22px;
+      margin: 10px;
+      text-align: center;
+    }
+    .symbol-btn:hover, .symbol-btn:focus {
+      cursor: pointer;
+    }
 
+    .left-tool-box {
+      .left-arrow {
+        @extend .symbol-btn;
+        font-size: 40px;
+        line-height: 22px;
+      }
     }
 
     .modal-content {
-      /* Modal Content (Image) */
+      /* modal content (image) */
       .modal-content-image {
         max-width: 100%;
         max-height: 100%;
@@ -45,20 +60,27 @@ $text-secondary-color: $grey-500;
     }
 
     .right-tool-box {
-      /* The Close Button */
+      /* the close button */
       .close {
-        color: $text-secondary-color;
+        @extend .symbol-btn;
         font-size: 40px;
-        height: 22px;
         line-height: 18px;
-        margin: 10px;
-        text-align: center;
         transition: 0.5s;
-        width: 22px;
       }
       .close:hover, .close:focus {
-        cursor: pointer;
         transform: rotate(90deg);
+      }
+
+      /* the right arrow button */
+      .right-arrow {
+        @extend .symbol-btn;
+        font-size: 40px;
+        line-height: 22px;
+      }
+
+      .placeholder {
+        height: 42px; /* the close btn takes 42px */
+        width: 100%;
       }
     }
   }
