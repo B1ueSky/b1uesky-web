@@ -1,13 +1,18 @@
-<section class="anniversay2016" fxLayout="column" fxLayoutAlign="center center">
+<section class="anniversay2016">
     <!-- to solve puzzle -->
-    <div *ngIf="!canAccess" class="letter-header">献给特别的你</div>
-    <square-puzzle *ngIf="!canAccess" [images]="images" [initSequence]="initSequence" (onSolved)="onPuzzleSolved($event)"></square-puzzle>
-    <!-- season selection -->
-    <div *ngIf="canAccess" class="season-selection" fxLayout="row" fxLayoutAlign="center center">
-        <button *ngFor="let s of [100, 200, 300, 400]" class="selection-tab" fxFlexAlign="center" fxFlex="25"
-               (click)="selectSeason(s)" [class.active]="s === season" [disabled]="s === season">{{ seasons[s].show }}
-        </button>
+    <div *ngIf="!canAccess" class="front-page" fxLayout="column" fxLayoutAlign="center center">
+        <div class="letter-header">献给特别的你</div>
+        <square-puzzle *ngIf="!canAccess" [images]="images" [initSequence]="initSequence" (onSolved)="onPuzzleSolved($event)"></square-puzzle>
     </div>
-    <!-- display season content -->
-    <image-wall *ngIf="canAccess" [images]="images" [numCols]="numImagesPerRow" [angleRange]="angle"></image-wall>
+
+    <div *ngIf="canAccess" class="image-wall-page" fxLayout="column" fxLayoutAlign="start center">
+        <!-- season selection -->
+        <div class="season-selection" fxLayout="row" fxLayoutAlign="center center">
+            <button *ngFor="let s of [100, 200, 300, 400]" class="selection-tab" fxFlexAlign="center" fxFlex="25"
+                   (click)="selectSeason(s)" [class.active]="s === season" [disabled]="s === season">{{ seasons[s].show }}
+            </button>
+        </div>
+        <!-- display season content -->
+        <image-wall [images]="images" [numCols]="numImagesPerRow" [angleRange]="angle"></image-wall>
+    </div>
 </section>

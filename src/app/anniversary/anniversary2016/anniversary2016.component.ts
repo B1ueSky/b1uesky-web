@@ -43,9 +43,7 @@ export class Anniversary2016Component implements OnInit, OnDestroy {
             }
         });
         this.images = await this.getPuzzleImages();
-        if (!this.season) {
-            this.initSequence = [0, 1, 2, 3, 4, 5, 6, null, 7];
-        }
+        this.initSequence = [0, 4, 1, 3, null, 2, 6, 7, 5];
         if (this.isShuffled) {
             this.images = _.shuffle(this.images);
         }

@@ -6,46 +6,54 @@ $text-secondary-color: $grey-500;
 
 .anniversay2016 {
   font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
-  min-height: 100vh;
-  min-width: 100vm;
   overflow: auto;
   height: auto;
   width: auto;
   background-color: $background-color;
 
-  .letter-header {
-    color: $text-primary-color;
-    font-size: 30px;
-    font-weight: 100;
-    letter-spacing: 4px;
-    margin: 15px;
+  .front-page {
+    min-height: 100vh;
+    min-width: 100vm;
+
+    .letter-header {
+      color: $text-primary-color;
+      font-size: 30px;
+      font-weight: 100;
+      letter-spacing: 4px;
+      margin: 15px;
+    }
   }
 
-  .season-selection {
-    width: 100%;
-    margin: 0 0 30px;
-    overflow: hidden;
+  .image-wall-page {
+    min-height: 100vh;
+    min-width: 100vm;
 
-    /* Float the list items side by side */
-    .selection-tab {
-      background-color: $light-background-color;
-      border: 0;
-      color: $text-secondary-color;
-      padding: 14px 16px;
-      transition: 0.3s;
-      font-size: 17px;
-    }
+    .season-selection {
+      width: 100%;
+      margin: 0 0 30px;
+      overflow: hidden;
 
-    /* Change background color of links on hover */
-    :hover, :focus {
-      color: $light-background-color;
-      background-color: $text-secondary-color
-    }
+      /* Float the list items side by side */
+      .selection-tab {
+        background-color: $light-background-color;
+        border: 0;
+        color: $text-secondary-color;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
 
-    /* Create an active/current class */
-    .active {
-      color: $text-primary-color;
-      background-color: $background-color;
+      /* Change background color of links on hover */
+      :hover, :focus {
+        color: $light-background-color;
+        background-color: $text-secondary-color
+      }
+
+      /* Create an active/current class */
+      .active {
+        color: $text-primary-color;
+        background-color: $background-color;
+      }
     }
   }
 }
