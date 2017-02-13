@@ -5,6 +5,7 @@ $text-primary-color: $grey-50;
 $text-secondary-color: $grey-500;
 
 .anniversay2016 {
+  font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
   min-height: 100vh;
   min-width: 100vm;
   overflow: auto;
@@ -15,7 +16,9 @@ $text-secondary-color: $grey-500;
   .letter-header {
     color: $text-primary-color;
     font-size: 30px;
+    font-weight: 100;
     letter-spacing: 4px;
+    margin: 15px;
   }
 
   .season-selection {
