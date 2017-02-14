@@ -12,7 +12,6 @@ export class ImageWallComponent implements OnInit {
     @Input() private numCols: number = 5;
     @Input() private angleRange: number | [number, number] = 5;
 
-    private images2D: Image[][];
     private popupImageIdx: number;
 
     constructor() {
@@ -22,10 +21,16 @@ export class ImageWallComponent implements OnInit {
         if (_.isNumber(this.angleRange)) {
             this.angleRange = [-this.angleRange, this.angleRange];
         }
-        this.images2D = _.chunk(this.images, this.numCols);
     }
 
     ngOnInit() {
+    }
+
+    private styleImageWall(): {[key: string]: string} {
+        return {
+            // because each image wall item occupies 130px
+            'max-width': this.numCols * 130 + 'px'
+        }
     }
 
     private styleImageWallItem(): {[key: string]: string} {

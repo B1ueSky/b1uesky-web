@@ -5,20 +5,21 @@ $text-primary-color: $grey-50;
 $text-secondary-color: $grey-500;
 
 .image-wall {
-  .image-wall-row {
-    .image-wall-item {
-      display: inline-block;
-      height: 100px;
-      margin: 25px 15px;
-      width: 100px;
+  text-align: center;
 
-      .image-wrapper {
-        border: 2px solid white;
-        max-height: 100%;
-        max-width: 100%;
-      }
+  .image-wall-item {
+    display: inline-block;
+    height: 100px;
+    margin: 25px 15px;
+    width: 100px;
+
+    .image-wrapper {
+      border: 2px solid white;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
+
 
   /* The Modal (background) */
   .image-modal {
