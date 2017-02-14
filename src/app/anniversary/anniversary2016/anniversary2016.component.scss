@@ -29,18 +29,21 @@ $text-secondary-color: $grey-500;
     min-width: 100vm;
 
     .season-selection {
+      position: fixed;
       width: 100%;
-      margin: 0 0 30px;
       overflow: hidden;
+      z-index: 1;
 
       /* Float the list items side by side */
       .selection-tab {
         background-color: $light-background-color;
         border: 0;
         color: $text-secondary-color;
+        font-size: 17px;
+        height: 48px;
+        line-height: 20px;
         padding: 14px 16px;
         transition: 0.3s;
-        font-size: 17px;
       }
 
       /* Change background color of links on hover */
@@ -54,6 +57,10 @@ $text-secondary-color: $grey-500;
         color: $text-primary-color;
         background-color: $background-color;
       }
+    }
+
+    .image-wall {
+      margin-top: 48px;
     }
   }
 }
