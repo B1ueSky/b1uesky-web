@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
     imports: [
         BsZoneRouter,
         CommonModule,
-        FlexLayoutModule.forRoot(),
+        FlexLayoutModule,
     ],
     declarations: [HomeComponent]
 })

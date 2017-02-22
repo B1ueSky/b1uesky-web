@@ -6,14 +6,14 @@ import {ImageWallComponent} from './directives/image-wall/image-wall.component';
 import {MaterialModule} from "@angular/material";
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ImageService} from "../services/image.service";
-import { SquarePuzzleComponent } from './directives/square-puzzle/square-puzzle.component';
+import {SquarePuzzleComponent} from './directives/square-puzzle/square-puzzle.component';
 
 @NgModule({
     imports: [
         AnniversaryRouter,
         CommonModule,
-        FlexLayoutModule.forRoot(),
-        MaterialModule.forRoot(),
+        FlexLayoutModule,
+        MaterialModule,
     ],
     declarations: [Anniversary2016Component, ImageWallComponent, SquarePuzzleComponent],
     providers: [ImageService]
