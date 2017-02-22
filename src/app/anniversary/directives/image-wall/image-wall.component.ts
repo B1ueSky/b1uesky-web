@@ -19,7 +19,7 @@ export class ImageWallComponent implements OnInit {
 
     ngOnChanges() {
         if (_.isNumber(this.angleRange)) {
-            this.angleRange = [-this.angleRange, this.angleRange];
+            this.angleRange = [-this.angleRange, this.angleRange] as [number, number];
         }
     }
 
