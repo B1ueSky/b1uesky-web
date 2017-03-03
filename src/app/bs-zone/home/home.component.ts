@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
     private resume: string;
 
     constructor() {
-        this.resume = 'https://s3.amazonaws.com/b1uesky/bs-zone/resume-030117.pdf';
+        this.resume = 'https://s3.amazonaws.com/b1uesky/bs-zone/resume-030317.pdf';
     }
 
     ngOnInit() {
