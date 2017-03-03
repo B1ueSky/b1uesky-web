@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+    private resume: string;
 
-  constructor() { }
+    constructor() {
+        this.resume = 'https://s3.amazonaws.com/b1uesky/bs-zone/resume-030117.pdf';
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

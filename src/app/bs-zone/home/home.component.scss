@@ -1,52 +1,56 @@
+@import '../../styles/color';
+
+$background-color: rgba(17, 17, 17, 0.8);
+$text-primary-color: #fff;
+$text-secondary-color: #878787;
+$text-highlight-color: rgb(204, 0, 0);
+$link-highlight-color: #fcd088;
+
 .home {
   height: 100vh;
   width: 100vm;
-  background: url("/assets/images/bs-zone/background.jpg") no-repeat fixed center;
+  background: linear-gradient(
+                  rgba(red($background-color), green($background-color), blue($background-color), opacity($background-color)),
+                  rgba(red($background-color), green($background-color), blue($background-color), opacity($background-color))
+  ),
+  url(http://wizard-photography.beantownthemes.com/wp-content/uploads/footer-bg-image1.jpg) no-repeat fixed center;
   background-size: cover;
+  color: $text-primary-color;
+  font-family: 'Amiko', 'Open Sans', sans-serif;
+  font-size: 20px;
 
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #656D6D;
-  word-wrap: break-word;
-  line-height: 1.9;
-  letter-spacing: 1px;
-  font-weight: 300;
-  text-rendering: optimizeLegibility;
+  .home-logo {
+    font-size: 60px;
+  }
 
   .slogan {
-    width: 100%;
-    font-size: 23px;
+    color: $text-secondary-color;
+    font-size: 20px;
+    line-height: 40px;
+
+    .slogan-highlight {
+      color: $text-highlight-color;
+    }
   }
 
-  .footer {
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5) 100%);
-  }
+  .nav-bar {
+    position: absolute;
+    bottom: 40px;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #fcd088;
-    -webkit-transition: color 0.3s;
-    transition: color 0.3s;
-  }
+    a:hover {
+      color: $link-highlight-color;
+      cursor: pointer;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s;
+    }
 
-  i {
-    padding: 5px;
+    .active-tab {
+      color: $link-highlight-color;
+    }
   }
 }

@@ -1,15 +1,29 @@
-<div class="home" fxLayout="column" fxLayoutAlign="space-between center">
-  <div class="slogan" fxFlex="85" fxLayout="column" fxLayoutAlign="center center">
-    <h1>If&nbsp;&nbsp;you&nbsp;&nbsp;want&nbsp;&nbsp;to&nbsp;&nbsp;go&nbsp;&nbsp;fast,&nbsp;&nbsp;walk&nbsp;&nbsp;alone;<br/>
-    if&nbsp;&nbsp;you&nbsp;&nbsp;want&nbsp;&nbsp;to&nbsp;&nbsp;go&nbsp;&nbsp;far,&nbsp;&nbsp;walk&nbsp;&nbsp;together.</h1>
+<div class="home" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="80px" fxLayoutGap.xs="40px">
+  <div class="home-logo">B1UESKY</div>
+
+  <div class="slogan" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutWrap>
+    <span>IF&nbsp;&nbsp;YOU&nbsp;&nbsp;WANT&nbsp;&nbsp;TO&nbsp;&nbsp;GO&nbsp;&nbsp;FAST&nbsp;,&nbsp;&nbsp;</span>
+    <span>WALK&nbsp;&nbsp;ALONE&nbsp;;</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutWrap>
+    <span>IF&nbsp;&nbsp;YOU&nbsp;&nbsp;WANT&nbsp;&nbsp;TO&nbsp;&nbsp;GO&nbsp;&nbsp;FAR&nbsp;,&nbsp;&nbsp;</span>
+    <span><span class="slogan-highlight">WALK&nbsp;&nbsp;TOGOTHER</span>&nbsp;.</span>
+    </div>
   </div>
-  <div fxFlex="15" class="footer" fxLayout="row" fxLayoutAlign="space-around center">
-    <div fxFlex="60" fxLayout="row" fxLayout.sm="column" fxLayoutAlign="space-between center">
-      <h1 fxFlex="20" fxFlexAlign="center"><a href="bszone/">B1ueSky</a></h1>
-      <div fxFlex="20" fxLayoutAlign="center center">
-        <h1><a href="https://github.com/B1ueSky" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
-        <h1><a href="https://www.linkedin.com/in/luoty/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></h1>
-      </div>
+
+  <div class="nav-bar" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+    <!-- navigation for site -->
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="30px" fxLayoutGap.xs="15px">
+      <a href="/" class="active-tab">HOME</a>
+      <a href="/">BLOG</a>
+      <a href="/">ABOUT ME</a>
+      <a href="{{resume}}" target="_blank">RESUME</a>
+    </div>
+    <!-- navigation for others -->
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <a href="https://www.github.com/B1ueSky" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/luoty/" target="_blank"><i class="fa fa-linkedin"></i></a>
     </div>
   </div>
 </div>
