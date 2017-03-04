@@ -17,22 +17,22 @@ $link-highlight-color: #fcd088;
   background-size: cover;
   color: $text-primary-color;
   font-family: 'Raleway', 'Amiko', 'Open Sans', sans-serif;
-  font-size: 20px;
   font-weight: 100;
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
 
   .home-logo {
     font-family: 'Amiko';
-    font-size: 60px;
+    font-size: 3em;
   }
 
   .slogan {
     color: $text-secondary-color;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 1.4em;
+    line-height: 2em;
+    margin: 0 10px;
 
     .slogan-highlight {
-      //color: $text-highlight-color;
       font-weight: 700;
     }
   }
