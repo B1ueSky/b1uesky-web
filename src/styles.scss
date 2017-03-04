@@ -11,6 +11,10 @@ html {
 }
 
 body {
+  .app-init {
+    @extend .position-absolute-center;
+    color: #fcd088;
+  }
 }
 
 .position-absolute-center {
