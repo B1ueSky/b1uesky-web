@@ -27,20 +27,19 @@ $link-highlight-color: #fcd088;
   }
 
   .slogan {
-    color: $text-secondary-color;
     font-size: 1.4em;
     line-height: 2em;
     margin: 0 10px;
     text-align: center;
 
     .slogan-highlight {
-      font-weight: 700;
+      font-weight: 400;
     }
   }
 
   .nav-bar {
     a {
-      color: inherit;
+      color: $text-secondary-color;
       text-decoration: none;
     }
 
