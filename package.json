@@ -12,7 +12,7 @@
     "e2e": "protractor",
     "build": "ng build",
     "deploy-dev": "ng build --env=prod && aws s3 rm s3://dev.b1uesky.me/ --recursive && aws s3 sync dist/ s3://dev.b1uesky.me/",
-    "deploy-prod": "ng build --env=prod && aws s3 rm s3://b1uesky.me/ --recursive && aws s3 sync dist/ s3://b1uesky.me/",
+    "deploy-prod": "git checkout master && ng build --env=prod && aws s3 rm s3://b1uesky.me/ --recursive && aws s3 sync dist/ s3://b1uesky.me/",
     "sync-prod-with-dev": "aws s3 rm s3://b1uesky.me/ --recursive && aws s3 sync s3://dev.b1uesky.me/ s3://b1uesky.me/"
   },
   "private": true,
