@@ -12,23 +12,23 @@ After building up the first version of my personal website with Angular 2, I was
 2. Login to AWS, select S3 service and create a bucket.
 3. Get into the bucket and upload all files in `dist/`.
 4. In order to make this bucket public accessible, 
-	1. click `Properties` on the upper-right corner;
-	2. expand `Permissions` section and edit bucket policy as following;
+    1. click `Properties` on the upper-right corner;
+    2. expand `Permissions` section and edit bucket policy as following;
     ```
-	{
-		"Version": "2012-10-17",
-		"Statement": [
-			{
-				"Sid": "Allow Public Access to All Objects",
-				"Effect": "Allow",
-				"Principal": "*",
-				"Action": "s3:GetObject",
-				"Resource": "arn:aws:s3:::your-bucket-name/*"
-			}
-		]
-	}
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "Allow Public Access to All Objects",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::your-bucket-name/*"
+            }
+        ]
+    }
     ```
-	3. expand `Static Website Hosting` section, choose `Enable website hosting`, enter `index.html` for both Index Document and Error Document and save. The reason to set up the Error Document to be index page is all requests except `"/"` and `"/index.html"` should fall back onto `index.html` so that the request can be handled properly. Otherwise, `404 Not Found` will show up. 
+    3. expand `Static Website Hosting` section, choose `Enable website hosting`, enter `index.html` for both Index Document and Error Document and save. The reason to set up the Error Document to be index page is all requests except `"/"` and `"/index.html"` should fall back onto `index.html` so that the request can be handled properly. Otherwise, `404 Not Found` will show up. 
 
 Now you can see the `Endpoint` in `Static Website Hosting` section. That is the web address your Angular 2 app is hosting on. Go and check it out!
 
