@@ -1,5 +1,9 @@
-import {Routes, RouterModule} from "@angular/router";
+import {
+    Routes,
+    RouterModule
+} from "@angular/router";
 import {HomeComponent} from "./home/home.component";
+import {BlogComponent} from './blog/blog.component';
 
 const bsZoneRoutes: Routes = [
     {
@@ -8,6 +12,10 @@ const bsZoneRoutes: Routes = [
             {
                 path: '',
                 component: HomeComponent
+            },
+            {
+                path: 'blog',
+                component: BlogComponent
             }
         ]
     }
