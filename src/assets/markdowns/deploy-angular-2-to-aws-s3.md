@@ -56,7 +56,7 @@ But you may notice, your Angular app is NOT secure! We need HTTPS, or I cannot k
 [angular-cli]: https://cli.angular.io/
 [aws-cli]: https://aws.amazon.com/cli/
 [bigrock]: https://www.bigrock.com/
-[bs-blog]: www.b1uesky.me/blog/
+[bs-blog]: http://www.b1uesky.me/bszone/blog/
 [config-aws-cli]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 [install-aws-cli]: http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 [pw]: http://www.b1uesky.me
