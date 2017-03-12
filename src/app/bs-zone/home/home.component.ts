@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit
 
     constructor()
     {
-        this.resume = 'https://s3.amazonaws.com/b1uesky/bs-zone/resume-030317.pdf';
+        this.resume = 'https://s3.amazonaws.com/b1uesky/bs-zone/tianyou-luo-resume.pdf';
         this.slogan = [
             'IF YOU WANT TO GO FAST, WALK ALONE;',
             'IF YOU WANT TO GO FAR,',
