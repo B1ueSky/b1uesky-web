@@ -12,8 +12,7 @@ import {PostService} from '../../services/post.service';
         templateUrl: './blog.component.html',
         styleUrls: [
             './blog.component.scss',
-        ],
-        encapsulation: ViewEncapsulation.None,
+        ]
     }
 )
 export class BlogComponent implements OnInit
