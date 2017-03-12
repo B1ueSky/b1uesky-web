@@ -1,6 +1,7 @@
 import {
     Component,
-    OnInit
+    OnInit,
+    ViewEncapsulation
 } from '@angular/core';
 import {Post} from '../../models/post';
 import {
@@ -14,7 +15,8 @@ import {PostService} from '../../services/post.service';
     {
         selector: 'app-post',
         templateUrl: './post.component.html',
-        styleUrls: ['./post.component.scss']
+        styleUrls: ['./post.component.scss'],
+        encapsulation: ViewEncapsulation.None,
     }
 )
 export class PostComponent implements OnInit
