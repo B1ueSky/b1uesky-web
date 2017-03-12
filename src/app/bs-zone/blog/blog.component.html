@@ -1,6 +1,5 @@
 <div class="blog">
     <div *ngFor="let post of posts">
-        <pre>{{post.content}}</pre>
-        <!--<markdown class="" [data]="post.content"></markdown>-->
+        <a [routerLink]="['/bszone/blog', post.filename]">{{ post.title }}</a>
     </div>
 </div>

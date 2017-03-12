@@ -1,29 +1,35 @@
 import * as _ from 'lodash';
 import {Injectable} from '@angular/core';
 import {Post} from '../models/post';
-import {
-    Response,
-    Http,
-} from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+import {Http} from '@angular/http';
 
 @Injectable()
 export class PostService
 {
-    private resourceBase = '/assets/markdowns/';
-    private posts: string[] = [
-        'deploy-angular-2-to-aws-s3.md',
-    ];
+    private resourceBase = 'https://s3.amazonaws.com/b1uesky/bs-zone/';
+    private posts: {[key: string]: Post} = {
+        'deploy-angular-2-to-aws-s3.md': {
+            title: 'How to Deploy Angular 2 App to AWS S3',
+            filename: 'deploy-angular-2-to-aws-s3.md',
+        }
+    };
 
     constructor(private http: Http) { }
 
     public async list(query?: any): Promise<Post[]>
     {
-        const promises: Promise<Response>[] = _.map(
-            this.posts, (postPath) => (this.http.get(this.resourceBase + postPath).toPromise())
-        );
-        const responses: Response[] = await Promise.all<Response>(promises);
+        return Promise.resolve(_.values(this.posts));
+    }
 
-        return _.map<Post[]>(responses, (res: Response) => ({content: res.text()}));
+    public async getPostByFilename(filename: string)
+    {
+        let post: Post = _.extend(
+            new Post(this.posts[filename] || {}), {
+                uri: this.resourceBase + filename,
+                createdAt: new Date().getTime(),
+            }
+        );
+
+        return Promise.resolve(post);
     }
 }

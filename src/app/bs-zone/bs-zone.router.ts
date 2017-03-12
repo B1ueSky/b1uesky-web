@@ -4,6 +4,7 @@ import {
 } from "@angular/router";
 import {HomeComponent} from "./home/home.component";
 import {BlogComponent} from './blog/blog.component';
+import {PostComponent} from './post/post.component';
 
 const bsZoneRoutes: Routes = [
     {
@@ -16,6 +17,10 @@ const bsZoneRoutes: Routes = [
             {
                 path: 'blog',
                 component: BlogComponent
+            },
+            {
+                path: 'blog/:post',
+                component: PostComponent
             }
         ]
     }
